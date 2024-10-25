@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Livres Disponibles</title>
+</head>
+<body>
+    <h1>Livres Disponibles</h1>
+    <ul>
+        <% books.forEach(book => { %>
+            <li>
+                <%= book.title %> - <%= book.author %>
+                <a href="/user/download/<%= book._id %>">Télécharger</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
